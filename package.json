@@ -1,0 +1,26 @@
+{
+  "name": "policy-node-api",
+  "version": "0.0.0",
+  "description": "PolicyNodeAPI",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.14",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/restify": "^8.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.3.0",
+    "python": "0.0.4",
+    "restify": "^8.5.1",
+    "restify-jwt-community": "^1.1.4",
+    "ts-node": "^9.0.0"
+  }
+}
