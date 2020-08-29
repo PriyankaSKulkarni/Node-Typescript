@@ -58,6 +58,10 @@ export class PolicyController implements IController {
 
         policies.push({ id: 3, policynumber: "7876324", policyholdername: "XYZ", isactive: true });
 
+        policies.push({ id: 4, policynumber: "7876325", policyholdername: "Policy1", isactive: true });
+
+        policies.push({ id: 5, policynumber: "7876326", policyholdername: "Policy2", isactive: true });
+
         return policies;
 
     }
