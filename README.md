@@ -1,4 +1,4 @@
 # Node API using TypeScript
 
 
-Implementing logger, token authentication in node js application. 
+Implementing Logger, Token authentication in Node.js application using Typescript. 
