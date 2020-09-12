@@ -1,3 +1,4 @@
-# PolicyNodeAPI
+# Node API using TypeScript
 
 
+Implementing Logger, Token authentication in Node.js application using Typescript. 
