@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PolicyController = void 0;
+const PolicyService_1 = require("../Services/PolicyService");
 class PolicyController {
     initialize(httpServer) {
         httpServer.get('/policy', this.list.bind(this));
@@ -20,30 +21,29 @@ class PolicyController {
     }
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            res.send(this.getPolicyData());
+            res.send(yield PolicyService_1.policyService.list());
         });
     }
     getById(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const policy = yield this.getPolicyData().find(x => x.id == req.params.id);
-            res.send(policy ? 200 : 404, policy);
+            const policyModel = yield PolicyService_1.policyService.getById(req.params.id);
+            res.send(policyModel ? 200 : 404, policyModel);
         });
     }
     update(req, res) {
-        return __awaiter(this, void 0, void 0, function* () { });
+        return __awaiter(this, void 0, void 0, function* () {
+            res.send(yield PolicyService_1.policyService.update(req.body));
+        });
     }
     create(req, res) {
-        return __awaiter(this, void 0, void 0, function* () { });
+        return __awaiter(this, void 0, void 0, function* () {
+            res.send(yield PolicyService_1.policyService.create(req.body));
+        });
     }
     remove(req, res) {
-        return __awaiter(this, void 0, void 0, function* () { });
-    }
-    getPolicyData() {
-        var policies = [];
-        policies.push({ id: 1, policynumber: "7876322", policyholdername: "ABC", isactive: false });
-        policies.push({ id: 2, policynumber: "7876323", policyholdername: "PQR", isactive: true });
-        policies.push({ id: 3, policynumber: "7876324", policyholdername: "XYZ", isactive: true });
-        return policies;
+        return __awaiter(this, void 0, void 0, function* () {
+            res.send(yield PolicyService_1.policyService.delete(req.params.id));
+        });
     }
 }
 exports.PolicyController = PolicyController;

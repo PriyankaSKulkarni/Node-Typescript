@@ -23,7 +23,7 @@ class HomeController {
                 name: "bhavesh"
             };
             var options = {
-                expiresIn: "30s"
+                expiresIn: "60s"
             };
             jwt.sign(user, config_1.CONFIG.JWT_SECRET, options, (err, token) => {
                 res.json({

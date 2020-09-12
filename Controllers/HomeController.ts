@@ -24,7 +24,7 @@ export class HomeController implements IController {
 
             id: 1,
 
-            name: "bhavesh"
+            name: "priyanka"
 
         };
 
@@ -32,7 +32,7 @@ export class HomeController implements IController {
 
         var options = {
 
-            expiresIn: "30s"
+            expiresIn: "60s"
 
         };
 

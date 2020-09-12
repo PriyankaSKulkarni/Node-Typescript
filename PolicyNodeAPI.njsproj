@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Data\Entities\" />
     <Folder Include="Models\" />
     <Folder Include="Data\" />
     <Folder Include="Interfaces\" />
@@ -61,7 +62,16 @@
     <TypeScriptCompile Include="Controllers\PolicyController.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Data\DatabaseProvider.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Data\Entities\Policy.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Interfaces\IController.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Interfaces\IDatabaseProvider.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Interfaces\IHttpServer.ts">
@@ -71,6 +81,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Server\ApiServer.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Services\PolicyService.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
